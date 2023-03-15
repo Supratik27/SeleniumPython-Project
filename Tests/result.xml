@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="0.241" timestamp="2023-03-15T15:36:34.801367" hostname="DESKTOP-S4TBV7B"><testcase classname="test_Homepage.TestHomePage" name="test_formSubmission[GetData0]" time="0.003"><error message="failed on setup with &quot;UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value&quot;">request = &lt;SubRequest 'setup' for &lt;Function test_formSubmission[GetData0]&gt;&gt;
+
+    @pytest.fixture(scope="class")
+    def setup(request):
+        browser_name = request.config.getoption("browser_name")
+        if browser_name == "firefox":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.32.2-win64\\geckodriver.exe")
+            driver = webdriver.Firefox(service=service_obj)
+        elif browser_name == "chrome":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\chromedriver_win32\\chromedriver.exe")
+            driver = webdriver.Chrome(service=service_obj)
+    
+&gt;       driver.get("https://rahulshettyacademy.com/angularpractice/")
+E       UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+
+conftest.py:24: UnboundLocalError</error></testcase><testcase classname="test_Homepage.TestHomePage" name="test_formSubmission[GetData1]" time="0.001"><error message="failed on setup with &quot;UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value&quot;">request = &lt;SubRequest 'setup' for &lt;Function test_formSubmission[GetData0]&gt;&gt;
+
+    @pytest.fixture(scope="class")
+    def setup(request):
+        browser_name = request.config.getoption("browser_name")
+        if browser_name == "firefox":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.32.2-win64\\geckodriver.exe")
+            driver = webdriver.Firefox(service=service_obj)
+        elif browser_name == "chrome":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\chromedriver_win32\\chromedriver.exe")
+            driver = webdriver.Chrome(service=service_obj)
+    
+&gt;       driver.get("https://rahulshettyacademy.com/angularpractice/")
+E       UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+
+conftest.py:24: UnboundLocalError</error></testcase><testcase classname="test_e2e.Testone" name="test_e2e" time="0.001"><error message="failed on setup with &quot;UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value&quot;">request = &lt;SubRequest 'setup' for &lt;Function test_e2e&gt;&gt;
+
+    @pytest.fixture(scope="class")
+    def setup(request):
+        browser_name = request.config.getoption("browser_name")
+        if browser_name == "firefox":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.32.2-win64\\geckodriver.exe")
+            driver = webdriver.Firefox(service=service_obj)
+        elif browser_name == "chrome":
+            service_obj = Service("C:\\Users\\Lenovo\\Downloads\\chromedriver_win32\\chromedriver.exe")
+            driver = webdriver.Chrome(service=service_obj)
+    
+&gt;       driver.get("https://rahulshettyacademy.com/angularpractice/")
+E       UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+
+conftest.py:24: UnboundLocalError</error></testcase></testsuite></testsuites>
